@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+    <title>Our Library</title>
+</head>
+<body>
+    <header style="background: #1abc9c;height: 30%;">
+        <center style="font-size: 40px;font-family: 'Times New Roman';">Our beautiful library</center>
+    </header>
+    {% block books %}
+    {% endblock %}
+</body>
+</html>
