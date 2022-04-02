@@ -1,0 +1,10 @@
+{% extends "Base.html" %}
+
+{% block books%}
+<div class="book_panel" style="outline: 2px solid #000;">name:{{book.name}}|count:{{book.count}}</div>
+{% for author in book.authors.all%}
+<div class="book_panel" style="display: inline;background: #1abc9c">Author:{{author.name}}.{{author.surname}}</div>
+{% endfor%}
+<div class="book_panel" style="height: 50px">{{book.description}}</div>
+<div class="book_panel" style="height: 3px;background: black"></div>
+{% endblock%}

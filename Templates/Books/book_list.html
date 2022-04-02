@@ -2,7 +2,7 @@
 
 {% block books %}
 {% for i in content %}
-<div class="book_panel" style="outline: 2px solid #000;">name:{{i.name}}|count:{{i.count}}</div>
+<a href="{% url 'book_page' i.id%}"><div class="book_panel" style="outline: 2px solid #000;">name:{{i.name}}|count:{{i.count}}</div></a>
 {% for author in i.authors.all%}
 <div class="book_panel" style="display: inline;background: #1abc9c">Author:{{author.name}}.{{author.surname}}</div>
 {% endfor%}

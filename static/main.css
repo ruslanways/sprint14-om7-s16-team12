@@ -9,6 +9,7 @@
 }
 a {
     text-decoration: none;
+    color: black;
 }
 .btn-group button {
     background-color: #20B2AA; /* Green background */
