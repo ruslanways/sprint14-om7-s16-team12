@@ -9,4 +9,10 @@
 <div class="book_panel" style="height: 50px">{{i.description}}</div>
 <div class="book_panel" style="height: 3px;background: black"></div>
 {% endfor %}
+<div class="btn-group" style="width:100%">
+        <a href="/books/book_list/sorted_name_asc/"><button style="width:25%" >name ↓</button></a>
+        <a href="/books/book_list/sorted_name_desc/"><button style="width:25%">name ↑</button></a>
+        <a href="/books/book_list/sorted_count_asc/"><button style="width:25%">count ↑</button></a>
+        <a href="/books/book_list/sorted_count_desc/"><button style="width:25%">count ↓</button></a>
+</div>
 {% endblock %}

@@ -1,0 +1,14 @@
+{% extends "Base.html" %}
+
+{% block books%}
+<p style="height: 30px;width: 80%;background: darkcyan;margin-left: auto;
+    margin-right: auto;font-size: 30px;text-align:center;color: gold">UNORDERED</p>
+{% for i in content %}
+<a href="{% url 'book_page' i.id%}"><div class="book_panel" style="outline: 2px solid #000;">name:{{i.name}}|count:{{i.count}}</div></a>
+{% for author in i.authors.all%}
+<div class="book_panel" style="display: inline;background: #1abc9c">Author:{{author.name}}.{{author.surname}}</div>
+{% endfor%}
+<div class="book_panel" style="height: 50px">{{i.description}}</div>
+<div class="book_panel" style="height: 3px;background: black"></div>
+{% endfor %}
+{% endblock%}

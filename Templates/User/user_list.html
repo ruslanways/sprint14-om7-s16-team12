@@ -1,0 +1,9 @@
+{% extends "Base.html" %}
+
+{% block books %}
+{% for i in content %}
+<div class="book_panel">name={{i.first_name}},middle_surname={{i.middle_name}},last_name={{i.last_name}}</div>
+<div class="book_panel">email={{i.email}}</div>
+<div class="book_panel" style="height: 4px;visibility: visible;background: black"></div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "Base.html" %}
+
+{% block books%}
+<p style="height: 30px;width: 80%;background: darkcyan;margin-left: auto;
+    margin-right: auto;font-size: 30px;text-align:center;color: gold">ORDERS</p>
+{% for i in content%}
+<div class="book_panel">id={{i.id}},created={{i.created_at}},end_at={{i.end_at}}}</div>
+<div class="book_panel">plated_end_at={{i.plated_end_at}}</div>
+<div class="book_panel" style="height: 4px;visibility: visible;background: black"></div>
+{% endfor %}
+<div class="btn-group" style="width:100%">
+        <a href="/orders/list_sorted_created_asc/"><button style="width:25%" >created ↓</button></a>
+        <a href="/orders/list_sorted_created_desc/"><button style="width:25%">created ↑</button></a>
+        <a href="/orders/list_sorted_plated_asc/"><button style="width:25%">plated at ↓</button></a>
+        <a href="/orders/list_sorted_plated_desc/"><button style="width:25%">plated at ↑</button></a>
+</div>
+<a href="/orders/not_in_time/"><button style="width:100%">NOT IN TIME</button> </a>
+{% endblock %}
